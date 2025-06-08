@@ -40,9 +40,10 @@
     .container {
       max-width: 1200px;
       margin: 0 auto;
+      position: relative;
     }
     
-    /* هدر - اصلاح شده */
+    /* هدر - اصلاح نهایی */
     header {
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       color: white;
@@ -51,8 +52,8 @@
       position: relative;
       overflow: hidden;
       box-shadow: var(--card-shadow);
-      margin-bottom: -30px; /* تغییر از -50px به -30px */
-      z-index: 100; /* افزایش z-index */
+      z-index: 100;
+      margin-bottom: -30px;
     }
     
     header::before {
@@ -125,14 +126,14 @@
       color: var(--secondary);
     }
     
-    /* بخش اصلی - اصلاح شده */
+    /* بخش اصلی - اصلاح نهایی */
     .main-content {
       display: grid;
       grid-template-columns: 1fr 350px;
       gap: 30px;
       position: relative;
-      z-index: 50; /* تنظیم z-index */
-      margin-top: 30px; /* اضافه کردن فضای بالایی */
+      z-index: 50;
+      padding-top: 60px; /* افزایش فضای بالایی */
     }
     
     /* کارت‌های محتوا */
@@ -143,8 +144,8 @@
       box-shadow: var(--card-shadow);
       transition: var(--transition);
       margin-bottom: 30px;
-      position: relative; /* اضافه شده */
-      z-index: 20; /* تنظیم z-index */
+      position: relative;
+      z-index: 20;
     }
     
     .card:hover {
@@ -313,7 +314,7 @@
     /* نوار کناری */
     .sidebar {
       position: relative;
-      z-index: 20; /* تنظیم z-index */
+      z-index: 20;
     }
     
     .contact-card {
@@ -323,7 +324,7 @@
       box-shadow: var(--card-shadow);
       margin-bottom: 30px;
       transition: var(--transition);
-      position: relative; /* اضافه شده */
+      position: relative;
     }
     
     .contact-card:hover {
@@ -402,7 +403,7 @@
       padding: 25px;
       box-shadow: var(--card-shadow);
       transition: var(--transition);
-      position: relative; /* اضافه شده */
+      position: relative;
     }
     
     .security-card:hover {
@@ -500,7 +501,7 @@
     @media (max-width: 768px) {
       header {
         padding: 2rem 1rem;
-        margin-bottom: -20px; /* تنظیم برای موبایل */
+        margin-bottom: -20px;
       }
       
       .profile-text h1 {
@@ -516,7 +517,7 @@
       }
       
       .main-content {
-        margin-top: 20px; /* تنظیم برای موبایل */
+        padding-top: 40px;
       }
     }
     
@@ -532,7 +533,11 @@
       }
       
       header {
-        margin-bottom: -15px; /* تنظیم برای دستگاه‌های کوچک */
+        margin-bottom: -15px;
+      }
+      
+      .main-content {
+        padding-top: 30px;
       }
     }
     
